@@ -16,6 +16,10 @@
   text-transform: uppercase;
 }
 
+.award-lines .rfm-child {
+  padding-left: 65px !important;
+}
+
 .style-normal {
   font-style: normal;
 }

@@ -18,7 +18,11 @@ export const RunningLine: FC<IRunningLine> = ({
   return (
     <div className={styles}>
       <Marquee direction={direction} speed={speed}>
-        {text} {text} {text} {text} {text}
+        {text}
+        {text}
+        {text}
+        {text}
+        {text}
       </Marquee>
     </div>
   );
