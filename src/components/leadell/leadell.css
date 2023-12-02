@@ -1,0 +1,100 @@
+.leadell {
+  color: #fff;
+  font-family: Matter;
+  line-height: normal;
+  font-style: normal;
+  padding: 233px 0;
+  margin-top: 243px;
+  background-color: #000;
+}
+
+.leadell__title {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 130px;
+}
+.leadell__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 140px;
+}
+.leadell__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+}
+.leadell__lable {
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.leadell__text {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1350px) {
+  .leadell {
+    padding: 150px 0;
+    margin-top: 100px;
+  }
+  .leadell__title {
+    font-size: 50px;
+    margin-bottom: 80px;
+  }
+  .leadell__items {
+    gap: 100px;
+  }
+  .leadell__item {
+    gap: 35px;
+  }
+  .leadell__lable {
+    font-size: 38px;
+  }
+  .leadell__text {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .leadell {
+    padding: 100px 0;
+    margin-top: 100px;
+  }
+  .leadell__title {
+    font-size: 34px;
+    margin-bottom: 60px;
+  }
+  .leadell__items {
+    gap: 76px;
+  }
+  .leadell__item {
+  }
+  .leadell__lable {
+    font-size: 26px;
+  }
+  .leadell__text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .leadell__title {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .leadell__items {
+    gap: 50px;
+  }
+  .leadell__item {
+    gap: 25px;
+  }
+  .leadell__lable {
+    font-size: 22px;
+  }
+  .leadell__text {
+    font-size: 20px;
+  }
+}

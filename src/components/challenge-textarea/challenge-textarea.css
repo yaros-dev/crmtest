@@ -1,0 +1,48 @@
+.challenge__textarea {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #9e9b9b;
+  font-size: 36px;
+  font-weight: 400;
+  resize: none; 
+  overflow-y: hidden; 
+}
+
+.challenge__textarea::placeholder {
+  color: #9e9b9b;
+}
+
+.challenge__textarea_error {
+  color: #fc3c3c;
+  border-bottom: 1px solid #fc3c3c;
+}
+
+.challenge__textarea_error::placeholder {
+  color: #fc3c3c;
+}
+
+.error_text {
+  color: #fc3c3c;
+  font-family: Matter, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1350px) {
+  .challenge__textarea {
+    font-size: 28px;
+    font-weight: 400;
+  }
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .challenge__textarea {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+}

@@ -1,0 +1,45 @@
+.thank {
+  padding-left: 27px;
+  height: 80vh;
+  color: #000;
+  font-family: Matter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+.thank__title {
+  font-family: Matter;
+  font-size: 120px;
+  font-weight: 500;
+}
+.thank__sub {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.thank__title span {
+  font-family: Gallery Modern, sans-serif;
+}
+
+@media screen and (max-width: 1350px) {
+  .thank {
+    padding-left: 0;
+  }
+  .thank__title {
+    font-size: 90px;
+  }
+  .thank__sub {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thank__title {
+    font-size: 50px;
+  }
+  .thank__sub {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}

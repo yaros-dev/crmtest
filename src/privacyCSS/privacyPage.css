@@ -1,0 +1,133 @@
+.privacy__wrapper {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+.privacy__wrapper h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+.privacy__section {
+    padding-top: 100px;
+}
+
+.privacy__section p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+    line-height: 33px;
+}
+
+.section__title {
+    font-size: 2.6rem;
+    font-weight: 300;
+    padding-bottom: 30px;
+    letter-spacing: -2px;
+}
+
+.section__paragraph__title {
+    font-size: 1.9rem;
+    font-weight: 300;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.privacy__section ul {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 430px) {
+    .privacy__wrapper {
+        width: 85%;
+        padding-top: 150px;
+    }
+
+    .privacy__wrapper h1 {
+        font-size: 2.3rem;
+    }
+
+    .privacy__section p {
+        font-size: 1.2rem;
+    }
+
+    .section__title {
+        font-size: 2.3rem;
+    }
+
+    .section__paragraph__title {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 431px) {
+    .privacy__wrapper {
+        width: 85%;
+        padding-top: 150px;
+    }
+
+    .privacy__wrapper h1 {
+        font-size: 2.7rem;
+    }
+
+    .privacy__section p {
+        font-size: 1.2rem;
+    }
+
+    .section__title {
+        font-size: 2.3rem;
+    }
+
+    .section__paragraph__title {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .privacy__wrapper {
+        width: 80%;
+        padding-top: 150px;
+    }
+
+    .privacy__wrapper h1 {
+        font-size: 2.7rem;
+    }
+
+    .privacy__section p {
+        font-size: 1.2rem;
+    }
+
+    .section__title {
+        font-size: 2.3rem;
+    }
+
+    .section__paragraph__title {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+    .privacy__wrapper {
+        width: 70%;
+        padding-top: 150px;
+    }
+
+    .privacy__wrapper h1 {
+        font-size: 3rem;
+    }
+
+    .privacy__section p {
+        font-size: 1.5rem;
+    }
+
+    .section__title {
+        font-size: 2.8rem;
+    }
+
+    .section__paragraph__title {
+        font-size: 2rem;
+    }
+}
+

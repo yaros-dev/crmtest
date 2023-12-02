@@ -1,0 +1,139 @@
+.platforms {
+  padding-top: 247px;
+  padding-bottom: 125px;
+  color: #000;
+  font-family: Matter;
+  font-style: normal;
+  line-height: normal;
+}
+.platforms__title {
+  font-weight: 700;
+  font-size: 80px;
+  margin-bottom: 60px;
+}
+.platforms__subtitle {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 130px;
+}
+.platforms__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 184px;
+}
+.platforms__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.platforms__item hr {
+  background-color: #000;
+  height: 1px;
+  width: 170px;
+  margin: 40px 0;
+}
+.platforms-crm__boxs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  grid-column-gap: 56px;
+}
+.platforms-crm__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 600px;
+  gap: 10px;
+}
+.platforms-crm__box__title {
+  color: #8b8b8b;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+}
+.platforms-crm__box__text {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.platforms-crm__box__list {
+  list-style-position: outside;
+  padding-left: 14px;
+}
+.platforms-crm__box__list > li {
+  padding-left: 10px;
+}
+.platforms-crm__box__list > li::marker {
+  content: "•";
+}
+
+/* .platforms-crm__box__list > li::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+  top: 13px;
+  left: 12px;
+} */
+
+@media screen and (max-width: 1350px) {
+  .platforms {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .platforms__items {
+    gap: 130px;
+  }
+  .platforms__title {
+    font-size: 54px;
+    margin-bottom: 40px;
+  }
+  .platforms__subtitle {
+    font-size: 24px;
+    margin-bottom: 90px;
+  }
+  .platforms-crm__box__title {
+    font-size: 16px;
+  }
+
+  .platforms-crm__box__text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .platforms {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .platforms__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .platforms__subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .platforms__items {
+    gap: 90px;
+  }
+  .platforms-crm__boxs {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    grid-column-gap: 25px;
+    grid-row-gap: 30px;
+  }
+  .platforms-crm__box__title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .platforms__title {
+    font-size: 30px;
+  }
+}

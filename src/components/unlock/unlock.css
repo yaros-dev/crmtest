@@ -1,0 +1,23 @@
+.unlock__section {
+  width: 100%;
+  color: #000;
+  padding: 233px 0;
+}
+
+.unlock__section__items {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+@media screen and (max-width: 1350px) {
+  .unlock__section {
+    padding: 150px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .unlock__section {
+    padding: 100px 0;
+  }
+}

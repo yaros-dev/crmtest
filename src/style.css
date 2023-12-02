@@ -1,0 +1,125 @@
+@namespace svg "http://www.w3.org/2000/svg";
+
+:not(svg|*) {
+  all: unset;
+  display: revert;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-Heavy.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"), url("./fonts/matter/Matter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gallery Modern";
+  src: local("Gallery Modern"),
+    url("./fonts/gallerymodern/GalleryModern.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "UltraSolar Normal";
+  src: local("UltraSolar Normal"),
+    url("./fonts/ultrasolar/UltraSolarNormal.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./fonts/poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("./fonts/poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "UltraSolar";
+  src: local("UltraSolar"),
+    url("./fonts/ultrasolar/UltraSolar_Normal.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Matter", Poppins, Gallery Modern, sans-serif;
+}
+
+fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}

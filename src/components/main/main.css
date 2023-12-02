@@ -1,0 +1,106 @@
+.main__section {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+}
+
+.main__section--p {
+  padding-top: 361px;
+  height: calc(100vh + 270px);
+}
+
+.main__section__title {
+  color: white;
+  font-size: 96px;
+  padding-bottom: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.main__section__title span {
+  display: inline-flex;
+  padding: 10px 20px 0 20px;
+  font-family: "Gallery Modern", sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  transition: border 0.3s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.main__section__title > span:hover {
+  text-shadow: 0 0 40px #fff, 0 0 60px #fff, 0 0 100px #fff;
+}
+
+.main__section__subtitle {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.main__section__about {
+  padding-top: 249px;
+  color: #fff;
+  font-family: Matter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 233px;
+}
+
+@media screen and (max-width: 430px) {
+  .main__section__title {
+    font-size: 36px !important;
+  }
+
+  .main__section__title span {
+    font-size: 36px !important;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 431px) {
+  .main__section {
+    padding-top: 70px;
+  }
+  .main__section__title {
+    font-size: 55px;
+  }
+
+  .main__section__title span {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .main__section {
+    padding-top: 70px;
+  }
+  .main__section__title {
+    font-size: 70px;
+  }
+
+  .main__section__title span {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+  .main__section__title {
+    font-size: 60px;
+  }
+
+  .main__section__title span {
+    font-size: 60px;
+  }
+}

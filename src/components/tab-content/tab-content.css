@@ -1,0 +1,32 @@
+.tabs__content {
+  padding: 0 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.running-line {
+  background-color: #fff;
+  padding: 150px 0;
+  color: #fff;
+  font-family: Poppins, sans-serif;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 50px;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1350px) {
+  .running-line {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .running-line {
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,129 @@
+.questions {
+  padding: 247px 0;
+  font-style: normal;
+  line-height: normal;
+  color: #000;
+  font-family: Matter;
+}
+.questions__title {
+  font-family: Poppins;
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 85px;
+}
+.questions__divider {
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 50px;
+  height: 1px;
+}
+.questions__subtitle {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+
+.questions__accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 70px;
+}
+.questions__accordion__item {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.questions__accordion__title_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.questions__accordion__title_wrapper span {
+  font-size: 35px;
+  font-weight: 600;
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  transition: transform 0.2s;
+}
+
+.questions__accordion__title {
+  font-size: 35px;
+  font-weight: 600;
+  transition: all 0.2s;
+  padding-left: 40px;
+  user-select: none;
+}
+
+.questions__accordion__content {
+  font-size: 25px;
+  font-weight: 400;
+  padding-top: 20px;
+  transition: max-height 0.2s, opacity 0.2s;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.questions__accordion__content.active-item {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1350px) {
+  .questions {
+    padding: 150px 0;
+  }
+  .questions__title {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questions__subtitle {
+    font-size: 22px;
+  }
+  .questions__accordion__title {
+    font-size: 28px;
+  }
+  .questions__accordion__content {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .questions {
+    padding: 100px 0;
+  }
+  .questions__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .questions__divider {
+    margin-bottom: 30px;
+  }
+  .questions__subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .questions__accordion {
+    gap: 30px;
+  }
+  .questions__accordion__title_wrapper span {
+    font-size: 25px;
+  }
+
+  .questions__accordion__title {
+    font-size: 22px;
+    padding-left: 30px;
+  }
+
+  .questions__accordion__content {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
