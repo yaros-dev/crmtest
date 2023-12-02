@@ -11,6 +11,9 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 85px;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
 }
 .questions__divider {
   width: 100%;
@@ -47,30 +50,33 @@
   position: absolute;
   left: 0;
   top: -2px;
-  transition: transform 0.2s;
+  transition: 0.3s ease-in-out;
 }
 
 .questions__accordion__title {
   font-size: 35px;
   font-weight: 600;
-  transition: all 0.2s;
   padding-left: 40px;
   user-select: none;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
 }
 
 .questions__accordion__content {
   font-size: 25px;
   font-weight: 400;
   padding-top: 20px;
-  transition: max-height 0.2s, opacity 0.2s;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
   overflow: hidden;
   max-height: 0;
-  opacity: 0;
 }
 
 .questions__accordion__content.active-item {
   max-height: 500px;
-  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1350px) {

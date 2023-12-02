@@ -35,12 +35,6 @@ export const SliderCrm = ({ slides }: ISliderCrmDataOnScreen) => {
       console.log(isCenter);
 
       setIsBlockInCenter(isCenter);
-
-      //   if (!isBlockInCenter && (swiperIsEnd || swiperIsBeginning)) {
-      //     document.body.style.overflow = "auto";
-      //   } else {
-      //     document.body.style.overflow = "hidden";
-      //   }
     };
 
     window.addEventListener("scroll", handleScroll);
