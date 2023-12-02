@@ -4,10 +4,6 @@
   background-color: black;
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   gap: 249px;
 }
 
@@ -80,12 +76,6 @@
 
 @media screen and (max-width: 430px) {
   .main-crm__section {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     padding-top: 100px;
     padding-bottom: 150px;
   }
