@@ -1,7 +1,7 @@
 .link_box {
   font-family: Matter, sans-serif;
   font-size: 70px;
-  line-height: 70px;
+  line-height: 84px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 100px;
@@ -19,7 +19,7 @@
 .link__text {
   background: #fff;
   border-radius: 100px;
-  padding: 9px 24px 15px;
+  padding: 9px 24px 1px;
   border: 1px solid #000;
 }
 
@@ -80,7 +80,7 @@
 
   .link__text {
     line-height: 24px;
-    padding: 6px 24px 7px;
+    padding: 9px 24px 7px;
   }
 
   .link__img {
