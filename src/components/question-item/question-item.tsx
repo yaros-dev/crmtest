@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IQuestionsItem } from "../questions/questions";
 import { applyStylesToWords } from "../../utilites/apply-styles-to-words";
-import { Collapse } from "react-collapse";
+import AnimateHeight from "react-animate-height";
 const styles = [
   {
     position: 1,
@@ -15,36 +15,12 @@ const styles = [
 
 export const QuestionsItem = ({ title, content, index }: IQuestionsItem) => {
   const [active, setActive] = useState(index === 1);
-  const [isOpened, setIsOpened] = useState(false);
-  const height = 100;
 
   const toggleActiveItem = () => {
     setActive(!active);
-    setIsOpened(!isOpened);
   };
   return (
     <>
-      {/* <div className="questions__accordion__item" key={"sdfsd" + index}>
-        <div
-          className="questions__accordion__title_wrapper"
-          onClick={toggleActiveItem}
-        >
-          <span>{isOpened ? "-" : "+"} </span>
-          <div className="questions__accordion__title">
-            {index}. {title}
-          </div>
-        </div>
-        <Collapse isOpened={isOpened}>
-          <div
-            style={{ height }}
-            className={`questions__accordion__content ${
-              isOpened && "active-item"
-            }`}
-          >
-            {applyStylesToWords(styles, content)}
-          </div>
-        </Collapse>
-      </div> */}
       <div className="questions__accordion__item" key={"sdfsd" + index}>
         <div
           className="questions__accordion__title_wrapper"
@@ -55,11 +31,11 @@ export const QuestionsItem = ({ title, content, index }: IQuestionsItem) => {
             {index}. {title}
           </div>
         </div>
-        <div
-          className={`questions__accordion__content ${active && "active-item"}`}
-        >
-          {applyStylesToWords(styles, content)}
-        </div>
+        <AnimateHeight height={!active ? 0 : "auto"} duration={500}>
+          <div className="questions__accordion__content">
+            {applyStylesToWords(styles, content)}
+          </div>
+        </AnimateHeight>
       </div>
     </>
   );
