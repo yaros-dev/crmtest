@@ -10,6 +10,15 @@
   src: local("Matter"),
     url("./fonts/matter/Matter-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -22,13 +31,6 @@
 @font-face {
   font-family: "Matter";
   src: local("Matter"),
-    url("./fonts/matter/Matter-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Matter";
-  src: local("Matter"),
     url("./fonts/matter/Matter-Medium.ttf") format("truetype");
   font-weight: 500;
 }
@@ -36,14 +38,21 @@
 @font-face {
   font-family: "Matter";
   src: local("Matter"),
-    url("./fonts/matter/Matter-Heavy.ttf") format("truetype");
-  font-weight: 800;
+    url("./fonts/matter/Matter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "Matter";
   src: local("Matter"), url("./fonts/matter/Matter-Bold.ttf") format("truetype");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: local("Matter"),
+    url("./fonts/matter/Matter-Heavy.ttf") format("truetype");
+  font-weight: 800;
 }
 
 @font-face {
@@ -90,12 +99,6 @@
 
 body {
   font-family: "Matter", Poppins, Gallery Modern, sans-serif;
-}
-
-fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
 }
 
 .container {
