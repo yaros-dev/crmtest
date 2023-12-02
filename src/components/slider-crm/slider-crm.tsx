@@ -57,11 +57,9 @@ export const SliderCrm = ({ slides }: ISliderCrmDataOnScreen) => {
     if (swiperIsEnd) {
       window.scrollTo({ top: window.scrollY + 10 });
       document.body.style.overflow = "auto";
-      setIsBlockInCenter(false);
     } else if (swiperIsBeginning) {
       window.scrollTo({ top: window.scrollY - 10 });
       document.body.style.overflow = "auto";
-      setIsBlockInCenter(false);
     }
     setTimeout(() => {
       const rect = wrapperRef.current.getBoundingClientRect();
