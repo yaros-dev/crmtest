@@ -1,4 +1,8 @@
 .slider-crm-wrapper {
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .slider-crm {

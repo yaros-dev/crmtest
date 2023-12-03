@@ -17,29 +17,6 @@ import { MainCRMSection } from "../components/main-crm/main-crm";
 import { useRef, useState, useEffect } from "react";
 
 export function CRMPage() {
-  //   const wrapperRef = useRef<any>(null);
-
-  //   const [swiperIsEnd, setSwiperIsEnd] = useState(false);
-  //   const [swiperIsBeginning, setSwiperIsBeginning] = useState(false);
-
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       const rect = wrapperRef.current.getBoundingClientRect();
-  //       const centerY = window.innerHeight / 2;
-  //       const centerBlock = rect.top <= centerY && rect.bottom >= centerY;
-
-  //       if (centerBlock && (swiperIsBeginning || swiperIsEnd)) {
-  //         document.body.style.overflow = "auto";
-  //       } else {
-  //         document.body.style.overflow = "hidden";
-  //       }
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-
-  //     return () => window.removeEventListener("scroll", handleScroll);
-  //   }, [swiperIsEnd, swiperIsBeginning]);
-
   return (
     <>
       <MainCRMSection {...mainCrmScreenData} />
