@@ -21,68 +21,73 @@ export default function Scroll({ slides }) {
   const activeLinkRef = useRef(0);
   const tweenRef = useRef(null);
 
-  useEffect(() => {
-    const panelsContainer = panelsContainerRef.current;
-    const panels = panelsRef.current;
-    const links = linksRef.current;
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const panelsContainer = panelsContainerRef.current;
+      const panels = panelsRef.current;
+      const links = linksRef.current;
 
-    const width = window.innerWidth * (panels.length - 1);
-    const modifiedLength = links.length - 1;
+      const width = window.innerWidth * (panels.length - 1);
+      const modifiedLength = links.length - 1;
 
-    let snapPoints = links.map((_, i) => i / modifiedLength);
-    const mySnap = gsap.utils.snap(snapPoints);
-    links[activeLinkRef.current].classList.add("active");
+      let snapPoints = links.map((_, i) => i / modifiedLength);
+      const mySnap = gsap.utils.snap(snapPoints);
+      links[activeLinkRef.current].classList.add("active");
 
-    function setupScrollTweens() {
-      tweenRef.current = gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: panelsContainer,
-          pin: true,
-          scrub: 0.1,
-          end: () => {
-            const containerWidth = panelsContainerRef.current.offsetWidth;
-            const panelWidth = containerWidth / panels.length;
-            return `+=${panelWidth * panels.length}`;
+      function setupScrollTweens() {
+        tweenRef.current = gsap.to(panels, {
+          xPercent: -100 * (panels.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: panelsContainer,
+            pin: true,
+            scrub: 0.1,
+            end: () => {
+              const containerWidth = panelsContainerRef.current.offsetWidth;
+              const panelWidth = containerWidth / panels.length;
+              return `+=${panelWidth * panels.length}`;
+            },
+            snap: 1 / (panels.length - 1),
+            onUpdate: (self) => {
+              const newIndex = mySnap(self.progress) * modifiedLength;
+              if (newIndex !== activeLinkRef.current) {
+                linksRef.current[activeLinkRef.current].classList.remove(
+                  "active"
+                );
+                linksRef.current[newIndex].classList.add("active");
+                activeLinkRef.current = newIndex;
+              }
+            },
           },
-          snap: 1 / (panels.length - 1),
-          onUpdate: (self) => {
-            const newIndex = mySnap(self.progress) * modifiedLength;
-            if (newIndex !== activeLinkRef.current) {
-              linksRef.current[activeLinkRef.current].classList.remove(
-                "active"
-              );
-              linksRef.current[newIndex].classList.add("active");
-              activeLinkRef.current = newIndex;
-            }
-          },
-        },
-      });
-    }
+        });
+      }
 
-    setupScrollTweens();
+      setupScrollTweens();
 
-    const range = gsap.utils.mapRange(
-      0,
-      width,
-      0,
-      tweenRef.current.scrollTrigger.end
-    );
+      const range = gsap.utils.mapRange(
+        0,
+        width,
+        0,
+        tweenRef.current.scrollTrigger.end
+      );
 
-    document.querySelectorAll(".navTitle").forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        let targetElem = document.querySelector(e.target.getAttribute("href"));
-        gsap.to(window, {
-          scrollTo: {
-            y: () => range(targetElem.offsetLeft),
-            autoKill: false,
-          },
-          duration: 0.5,
+      document.querySelectorAll(".navTitle").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          let targetElem = document.querySelector(
+            e.target.getAttribute("href")
+          );
+          gsap.to(window, {
+            scrollTo: {
+              y: () => range(targetElem.offsetLeft),
+              autoKill: false,
+            },
+            duration: 0.5,
+          });
         });
       });
     });
+    return () => ctx.revert();
   }, []);
 
   return (
