@@ -1,9 +1,3 @@
-html {
-  scroll-behavior: smooth;
-  overflow-y: visible;
-  overflow-x: hidden;
-}
-
 .pin-spacer {
   padding: 0 !important;
 }

@@ -96,6 +96,10 @@
     url("./fonts/ultrasolar/UltraSolar_Normal.ttf") format("truetype");
   font-weight: 700;
 }
+html {
+  overflow-y: visible;
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Matter", Poppins, Gallery Modern, sans-serif;
