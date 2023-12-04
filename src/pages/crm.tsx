@@ -14,8 +14,6 @@ import { integrationScreenData } from "../mock/integration-screen";
 import { sliderCrmScreenData } from "../mock/slider-crm-screen";
 import { mainCrmScreenData } from "../mock/main-crm-screen";
 import { MainCRMSection } from "../components/main-crm/main-crm";
-import { useRef, useState, useEffect } from "react";
-import { MySlider } from "../components/my-slider/my-slider";
 import Scroll from "../components/scroll/scroll";
 
 export function CRMPage() {

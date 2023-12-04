@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect } from "react";
 import "./scroll.css";
 import { applyStylesToWords } from "../../utilites/apply-styles-to-words";
 
@@ -13,6 +13,10 @@ const stylesTitle = [
     style: { textDecorationLine: "underline" },
   },
 ];
+
+// export interface ISliderCrmDataOnScreen {
+//   slides: ISliderCrmItem[];
+// }
 
 export default function Scroll({ slides }) {
   const panelsContainerRef = useRef(null);
@@ -39,14 +43,13 @@ export default function Scroll({ slides }) {
           xPercent: -100 * (panels.length - 1),
           ease: "none",
           scrollTrigger: {
-            trigger: panelsContainer,
+            trigger: panelsContainer, // начало анимации
             pin: true,
-            scrub: 0.1,
-            end: () => {
-              const containerWidth = panelsContainerRef.current.offsetWidth;
-              const panelWidth = containerWidth / panels.length;
-              return `+=${panelWidth * panels.length}`;
-            },
+            // pinSpacing: false,
+            start: "top",
+            // markers: true, смотреть точки входа анимации
+            scrub: 0.2,
+            // end: () => `+=${width}`,
             snap: 1 / (panels.length - 1),
             onUpdate: (self) => {
               const newIndex = mySnap(self.progress) * modifiedLength;
@@ -77,13 +80,15 @@ export default function Scroll({ slides }) {
           let targetElem = document.querySelector(
             e.target.getAttribute("href")
           );
-          gsap.to(window, {
-            scrollTo: {
-              y: () => range(targetElem.offsetLeft),
-              autoKill: false,
-            },
-            duration: 0.5,
-          });
+          if (targetElem) {
+            gsap.to(window, {
+              scrollTo: {
+                y: () => range(targetElem.offsetLeft),
+                autoKill: false,
+              },
+              duration: 0.5,
+            });
+          }
         });
       });
     });
