@@ -1,6 +1,5 @@
 import { Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HorizontalScrollSlider from "horizontal-scroll-slider";
 import {
   SliderCrmItem,
   ISliderCrmItem,
