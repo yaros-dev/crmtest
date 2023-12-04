@@ -16,21 +16,12 @@ export interface ISliderCrmDataOnScreen {
 }
 
 export const SliderCrm = ({ slides }: ISliderCrmDataOnScreen) => {
-  const [swiperIsEnd, setSwiperIsEnd] = useState(false);
-  const [swiperIsBeginning, setSwiperIsBeginning] = useState(false);
-
-  const handleSlideChange = (swiper: any) => {
-    setSwiperIsEnd(swiper.realIndex === slides.length - 1);
-    setSwiperIsBeginning(swiper.realIndex === 0);
-  };
-
   return (
     <div className="slider-crm-wrapper">
       <div className="container">
         <Swiper
           modules={[Mousewheel, Pagination]}
           slidesPerView={1}
-          onSlideChange={handleSlideChange}
           mousewheel={true}
           direction={"horizontal"}
           pagination={true}

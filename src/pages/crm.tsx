@@ -15,14 +15,19 @@ import { sliderCrmScreenData } from "../mock/slider-crm-screen";
 import { mainCrmScreenData } from "../mock/main-crm-screen";
 import { MainCRMSection } from "../components/main-crm/main-crm";
 import { useRef, useState, useEffect } from "react";
+import { MySlider } from "../components/my-slider/my-slider";
+import Scroll from "../components/scroll/scroll";
 
 export function CRMPage() {
   return (
     <>
       <MainCRMSection {...mainCrmScreenData} />
       <AwardLines {...awardsScreenData} />
-      <SliderCrm {...sliderCrmScreenData} />
+      <Scroll {...sliderCrmScreenData} />
+      {/* <MySlider {...sliderCrmScreenData} /> */}
+      {/* <SliderCrm {...sliderCrmScreenData} /> */}
       <IntegrationCrm {...integrationScreenData} />
+
       <Leadell {...leadellScreenData} />
       <Platforms {...platformsScreenData} />
       <Questions {...questionsScreenData} />

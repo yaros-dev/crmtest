@@ -99,6 +99,10 @@
 
 body {
   font-family: "Matter", Poppins, Gallery Modern, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .container {
