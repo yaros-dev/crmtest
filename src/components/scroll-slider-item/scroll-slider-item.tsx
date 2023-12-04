@@ -7,13 +7,17 @@ const stylesTitle = [
   },
 ];
 
-export interface ISliderCrmItem {
+export interface IScrollSliderItem {
   title: string;
   label: string;
   subtitle: string;
 }
 
-export const SliderCrmItem = ({ title, label, subtitle }: ISliderCrmItem) => {
+export const ScrollSliderItem = ({
+  title,
+  label,
+  subtitle,
+}: IScrollSliderItem) => {
   return (
     <div className="slider-crm__item">
       <div className="slider-crm__item-title">

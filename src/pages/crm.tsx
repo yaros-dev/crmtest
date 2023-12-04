@@ -1,6 +1,5 @@
 import { AwardLines } from "../components/award-lines/award-lines";
 import { awardsScreenData } from "../mock/awards-screen";
-import { SliderCrm } from "../components/slider-crm/slider-crm";
 import { IntegrationCrm } from "../components/integration-crm/integration-crm";
 import { Leadell } from "../components/leadell/leadell";
 import { Platforms } from "../components/platforms/platforms";
@@ -14,18 +13,15 @@ import { integrationScreenData } from "../mock/integration-screen";
 import { sliderCrmScreenData } from "../mock/slider-crm-screen";
 import { mainCrmScreenData } from "../mock/main-crm-screen";
 import { MainCRMSection } from "../components/main-crm/main-crm";
-import Scroll from "../components/scroll/scroll";
+import { ScrollSlider } from "../components/scroll-slider/scroll-slider";
 
 export function CRMPage() {
   return (
     <>
       <MainCRMSection {...mainCrmScreenData} />
       <AwardLines {...awardsScreenData} />
-      <Scroll {...sliderCrmScreenData} />
-      {/* <MySlider {...sliderCrmScreenData} /> */}
-      {/* <SliderCrm {...sliderCrmScreenData} /> */}
+      <ScrollSlider {...sliderCrmScreenData} />
       <IntegrationCrm {...integrationScreenData} />
-
       <Leadell {...leadellScreenData} />
       <Platforms {...platformsScreenData} />
       <Questions {...questionsScreenData} />

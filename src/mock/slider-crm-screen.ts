@@ -1,4 +1,4 @@
-import { ISliderCrmDataOnScreen } from "../components/slider-crm/slider-crm";
+import { ISliderCrmDataOnScreen } from "../components/scroll-slider/scroll-slider";
 
 export const sliderCrmScreenData: ISliderCrmDataOnScreen = { 
     slides:  [
