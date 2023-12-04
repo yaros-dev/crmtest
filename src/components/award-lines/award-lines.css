@@ -1,6 +1,5 @@
 .award-lines__wrapper {
   padding-top: 233px;
-  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   gap: 58px;
@@ -27,7 +26,7 @@
 @media screen and (max-width: 1350px) {
   .award-lines__wrapper {
     padding-top: 140px;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
     gap: 48px;
   }
   .award-lines {
@@ -38,7 +37,7 @@
 @media screen and (max-width: 768px) {
   .award-lines__wrapper {
     padding-top: 100px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
     gap: 42px;
   }
   .award-lines {

@@ -41,7 +41,11 @@ export default function Scroll({ slides }) {
           trigger: panelsContainer,
           pin: true,
           scrub: 0.1,
-          end: () => "+=" + panelsContainerRef.current.offsetWidth,
+          end: () => {
+            const containerWidth = panelsContainerRef.current.offsetWidth;
+            const panelWidth = containerWidth / panels.length;
+            return `+=${panelWidth * panels.length}`;
+          },
           snap: 1 / (panels.length - 1),
           onUpdate: (self) => {
             const newIndex = mySnap(self.progress) * modifiedLength;

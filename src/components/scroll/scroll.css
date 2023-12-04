@@ -4,12 +4,17 @@ html {
   overflow-x: hidden;
 }
 
+.pin-spacer {
+  padding: 0 !important;
+}
+
 body {
   margin: 0;
 }
 
 .main-slideWrapper {
-  padding-top: 120px;
+  padding-top: 240px;
+  padding-bottom: 138px;
 }
 
 .main-slide {
@@ -82,6 +87,8 @@ body {
   font-size: 80px;
   font-weight: 400;
   margin-bottom: 102px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .slider-crm__item-lable {
@@ -89,6 +96,8 @@ body {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 46px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .slider-crm__item-subtitle {
@@ -96,6 +105,8 @@ body {
   font-size: 40px;
   font-weight: 400;
   padding-bottom: 90px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .panel__title {
@@ -132,6 +143,13 @@ body {
 }
 
 @media screen and (max-width: 1350px) {
+  .main-slideWrapper {
+    padding-top: 150px;
+    padding-bottom: 138px;
+  }
+  .slider-crm__item {
+    max-width: 1000px;
+  }
   .slider-crm__item-title {
     font-size: 62px;
     font-weight: 400;
@@ -148,6 +166,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .main-slideWrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .slider-crm__item {
+    max-width: 630px;
+  }
   .slider-crm__item-title {
     font-size: 42px;
     font-weight: 400;
@@ -164,6 +189,9 @@ body {
 }
 
 @media screen and (max-width: 430px) {
+  .slider-crm__item {
+    max-width: 360px;
+  }
   .slider-crm__item-title {
     font-size: 30px;
     font-weight: 400;
