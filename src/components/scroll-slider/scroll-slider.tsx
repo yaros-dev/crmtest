@@ -26,7 +26,6 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
       const panelsContainer = panelsContainerRef.current!;
       const panels = panelsRef.current!;
       const links = linksRef.current!;
-
       const width = window.innerWidth * (panels.length - 1);
       const modifiedLength = links.length - 1;
 
