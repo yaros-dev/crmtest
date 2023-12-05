@@ -28,7 +28,6 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
       const links = linksRef.current!;
       const width = window.innerWidth * (panels.length - 1);
       const modifiedLength = links.length - 1;
-
       let snapPoints = links.map((_, i) => i / modifiedLength);
       const mySnap = gsap.utils.snap(snapPoints);
       links[activeLinkRef.current]?.classList.add("active");
