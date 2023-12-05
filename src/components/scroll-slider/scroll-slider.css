@@ -143,7 +143,6 @@ body {
 
 @media screen and (max-width: 1350px) {
   .main-slideWrapper {
-    padding-top: 150px;
     padding-bottom: 138px;
   }
   .slider-crm__item {
@@ -167,7 +166,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .main-slideWrapper {
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 100px;
   }
   .slider-crm__item {
