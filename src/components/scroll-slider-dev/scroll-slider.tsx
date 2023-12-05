@@ -41,12 +41,10 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
           scrollTrigger: {
             pinnedContainer: ".main-slideWrapper",
             trigger: panelsContainer,
-            pin: true,
-            // start: "top",
+            pin: ".main-slideWrapper",
             scrub: 0.2,
+            // horizontal: true,
             end: () => `+=${width}`,
-            // end: "max",
-            // pinSpacing: false,
             snap: 1 / (panels.length - 1),
 
             onUpdate: (self) => {
@@ -72,6 +70,8 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
           }
           if (targetElem) {
             const element = document.querySelector(targetElem) as HTMLElement;
+            console.log(element.offsetLeft);
+
             gsap.to(window, {
               scrollTo: {
                 y:
