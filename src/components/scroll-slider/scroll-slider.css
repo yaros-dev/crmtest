@@ -26,6 +26,7 @@ body {
   height: fit-content;
   display: flex;
   justify-content: center;
+  left: -8px;
 }
 
 .main-slide .item {
@@ -193,6 +194,17 @@ body {
 @media screen and (max-width: 430px) {
   .main-slide {
     padding-top: 100px;
+  }
+
+  .thumb-slider {
+    width: 51px;
+    height: 17px;
+    gap: 8px;
+  }
+
+  .thumb-slider .navTitle {
+    width: 8px;
+    height: 8px;
   }
   .slider-crm__item {
     max-width: 360px;
