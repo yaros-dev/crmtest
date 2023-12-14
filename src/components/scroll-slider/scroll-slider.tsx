@@ -1,3 +1,7 @@
+import { AwardLines } from "../award-lines/award-lines";
+import { IntegrationCrm } from "../integration-crm/integration-crm";
+import { awardsScreenData } from "../../mock/awards-screen";
+import { integrationScreenData } from "../../mock/integration-screen";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -42,13 +46,10 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
             pinnedContainer: ".main-slideWrapper",
             trigger: panelsContainer,
             pin: true,
-            // start: "top",
+            start: "top",
             scrub: 1,
-            // end: () => `+=${width}`,
-            // end: "max",
-            // pinSpacing: false,
+            end: () => `+=${width}`,
             snap: 1 / (panels.length - 1),
-            end: () => "+=" + sliderMy.current?.offsetWidth,
             onUpdate: (self) => {
               const newIndex = mySnap(self.progress) * modifiedLength;
               if (newIndex !== activeLinkRef.current) {
@@ -90,6 +91,7 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
 
   return (
     <section className="sliderCRM-Wrapper">
+      <AwardLines {...awardsScreenData} />
       <div className="main-slideWrapper" ref={panelsContainerRef}>
         <div className="main-slide" ref={sliderMy}>
           {slides?.map((item, index) => (
@@ -118,6 +120,7 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
             ))}
           </div>
         </div>
+        <IntegrationCrm {...integrationScreenData} />
       </div>
     </section>
   );
