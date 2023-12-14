@@ -47,7 +47,7 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
             trigger: panelsContainer,
             pin: true,
             start: "top",
-            scrub: 1,
+            scrub: 0.1,
             end: () => `+=${width}`,
             snap: 1 / (panels.length - 1),
             onUpdate: (self) => {

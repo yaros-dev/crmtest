@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 58px;
   height: fit-content;
+  padding-bottom: 120px !important;
 }
 
 .award-lines {
@@ -49,6 +50,7 @@
   .award-lines__wrapper {
     padding-top: 100px;
     gap: 32px;
+    padding-bottom: 20px !important;
   }
   .award-lines {
     font-size: 20px;

@@ -13,7 +13,7 @@ body {
 
 .main-slide {
   display: flex;
-  padding-top: 240px;
+  padding-top: 120px !important;
 }
 
 .slide-item {
