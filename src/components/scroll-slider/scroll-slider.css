@@ -1,7 +1,10 @@
+.sliderCRM-Wrapper {
+  /* overflow: hidden !important; */
+}
 .pin-spacer {
   position: relative;
-  padding: 0 !important;
-  overflow: hidden !important;
+  /* padding: 0 !important; */
+  /* overflow: hidden !important; */
 }
 
 body {
@@ -14,6 +17,7 @@ body {
   width: 100%;
   max-height: 100%;
   overflow: hidden;
+  height: 100% !important;
 }
 
 .main-slide {

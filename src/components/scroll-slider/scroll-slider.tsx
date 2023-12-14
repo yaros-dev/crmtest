@@ -20,6 +20,7 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
   const linksRef = useRef<Array<HTMLDivElement | null>>([]);
   const activeLinkRef = useRef<number>(0);
   const tweenRef = useRef<gsap.core.Tween | null>(null);
+  const sliderMy = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,6 +28,7 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
       const panels = panelsRef.current!;
       const links = linksRef.current!;
       const width = window.innerWidth * (panels.length - 1);
+
       const modifiedLength = links.length - 1;
       let snapPoints = links.map((_, i) => i / modifiedLength);
       const mySnap = gsap.utils.snap(snapPoints);
@@ -41,12 +43,12 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
             trigger: panelsContainer,
             pin: true,
             // start: "top",
-            scrub: 0.2,
-            end: () => `+=${width}`,
+            scrub: 1,
+            // end: () => `+=${width}`,
             // end: "max",
             // pinSpacing: false,
             snap: 1 / (panels.length - 1),
-
+            end: () => "+=" + sliderMy.current?.offsetWidth,
             onUpdate: (self) => {
               const newIndex = mySnap(self.progress) * modifiedLength;
               if (newIndex !== activeLinkRef.current) {
@@ -87,34 +89,36 @@ export function ScrollSlider({ slides }: ISliderCrmDataOnScreen) {
   }, []);
 
   return (
-    <div className="main-slideWrapper" ref={panelsContainerRef}>
-      <div className="main-slide">
-        {slides?.map((item, index) => (
-          <div
-            key={item.label + index}
-            className={`slide-item item${1 + index}`}
-            id={`item${1 + index}`}
-            ref={(el) => (panelsRef.current![index] = el)}
-          >
-            <div className="item item-1">
-              <ScrollSliderItem {...item} />
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="navTitle-wrap">
-        <div className="thumb-slider">
-          {slides.map((_, index) => (
+    <section className="sliderCRM-Wrapper">
+      <div className="main-slideWrapper" ref={panelsContainerRef}>
+        <div className="main-slide" ref={sliderMy}>
+          {slides?.map((item, index) => (
             <div
-              key={index + "thumb-slider"}
-              className="slide-item "
-              ref={(el) => (linksRef.current![index] = el)}
+              key={item.label + index}
+              className={`slide-item item${1 + index}`}
+              id={`item${1 + index}`}
+              ref={(el) => (panelsRef.current![index] = el)}
             >
-              <a href={`#item${1 + index}`} className="navTitle"></a>
+              <div className="item item-1">
+                <ScrollSliderItem {...item} />
+              </div>
             </div>
           ))}
         </div>
+        <div className="navTitle-wrap">
+          <div className="thumb-slider">
+            {slides.map((_, index) => (
+              <div
+                key={index + "thumb-slider"}
+                className="slide-item "
+                ref={(el) => (linksRef.current![index] = el)}
+              >
+                <a href={`#item${1 + index}`} className="navTitle"></a>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

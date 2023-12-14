@@ -13,6 +13,7 @@ import { integrationScreenData } from "../mock/integration-screen";
 import { sliderCrmScreenData } from "../mock/slider-crm-screen";
 import { mainCrmScreenData } from "../mock/main-crm-screen";
 import { MainCRMSection } from "../components/main-crm/main-crm";
+// import { ScrollSlider } from "../components/scroll-slider/scroll-slider";
 import { ScrollSlider } from "../components/scroll-slider/scroll-slider";
 
 export function CRMPage() {
